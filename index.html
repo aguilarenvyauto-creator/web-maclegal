@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacLegal Abogados - Especialistas en Derecho Inmobiliario y Extranjería</title>
+    
+    <!-- Script de TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind para colores corporativos -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'maclegal-blue': '#0a2342', // Azul oscuro corporativo
+                        'maclegal-gold': '#f3b63a', // Dorado corporativo
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'], // Fuente moderna
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Importar la fuente Inter de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos adicionales para un look más pulido */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== Header & Navegación ===== -->
+    <header class="bg-maclegal-blue text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-extrabold text-white">
+                Mac<span class="text-maclegal-gold">Legal</span>
+            </a>
+            
+            <!-- Navegación Desktop -->
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#inicio" class="hover:text-maclegal-gold transition-colors">Inicio</a>
+                <a href="#servicios" class="hover:text-maclegal-gold transition-colors">Servicios</a>
+                <a href="#nosotros" class="hover:text-maclegal-gold transition-colors">Sobre Nosotros</a>
+                <a href="#contacto" class="cta-button bg-maclegal-gold text-maclegal-blue px-5 py-2 rounded-lg font-bold hover:bg-yellow-500">
+                    Consulta Gratuita
+                </a>
+            </nav>
+            
+            <!-- Botón Móvil -->
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Menú Móvil (Oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-maclegal-blue px-6 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block hover:text-maclegal-gold transition-colors">Inicio</a>
+            <a href="#servicios" class="block hover:text-maclegal-gold transition-colors">Servicios</a>
+            <a href="#nosotros" class="block hover:text-maclegal-gold transition-colors">Sobre Nosotros</a>
+            <a href="#contacto" class="block w-full text-center cta-button bg-maclegal-gold text-maclegal-blue px-5 py-2 rounded-lg font-bold hover:bg-yellow-500 mt-2">
+                Consulta Gratuita
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="inicio" class="bg-gray-50 pt-20 pb-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Columna de Texto -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <span class="text-sm font-bold text-maclegal-gold uppercase tracking-wider">Asesoramiento Legal para Extranjeros</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-maclegal-blue mt-2 mb-6 leading-tight">
+                        Tu bufete de abogados para invertir en España.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Expertos en compra-venta de inmuebles, herencias y gestión para no residentes. <br> <strong class="text-maclegal-blue">Te asistimos en todo el proceso.</strong>
+                    </p>
+                    <a href="#contacto" class="cta-button bg-maclegal-gold text-maclegal-blue px-10 py-4 rounded-lg font-extrabold text-lg shadow-lg hover:bg-yellow-500">
+                        SOLICITA TU CONSULTA GRATUITA
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">
+                        <span class="text-maclegal-gold font-bold">✓</span> Asesoría Multilingüe <span class="text-maclegal-gold font-bold mx-2">✓</span> Gestión sin desplazamientos
+                    </p>
+                </div>
+                <!-- Columna de Imagen/Placeholder -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/0a2342/f3b63a?text=MacLegal" 
+                         alt="Ilustración de justicia y derecho bancario" 
+                         class="rounded-lg shadow-2xl w-full">
+                    <!-- En la vida real, usar una imagen profesional o una ilustración de alta calidad -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Sección de Servicios Principales ACTUALIZADA ===== -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-maclegal-blue mb-4">Nuestras Áreas de Práctica</h2>
+            <p class="text-lg text-gray-600 mb-16 max-w-2xl mx-auto">
+                Ofrecemos asistencia integral al cliente extranjero que decide invertir o residir en España.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta Servicio 1: Compra-Venta de Inmuebles -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Icono SVG: Llave (Compra-Venta) -->
+                    <svg class="w-16 h-16 text-maclegal-gold mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v4a2 2 0 01-2 2H9a2 2 0 01-2-2V9a2 2 0 012-2h6zm-6 4a2 2 0 114 0 2 2 0 01-4 0z"></path></svg>
+                    <h3 class="text-2xl font-bold text-maclegal-blue mb-3">Compra-Venta de Inmuebles</h3>
+                    <p class="text-gray-600 text-sm">
+                        Asistencia integral al cliente extranjero que decide invertir y comprar una casa en España, tanto si es compra de obra nueva como adquisición de viviendas de segunda mano. Asesoramos durante todo el proceso, desde la firma de la escritura hasta la entrega de llaves. El cliente nos otorga un poder general, y desde MacLegal asistimos legalmente a las operaciones, para que el cliente pueda conseguir la vivienda a su nombre sin tener que desplazarse.
+                    </p>
+                </div>
+                <!-- Tarjeta Servicio 2: Alquileres -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Icono SVG: Casa (Alquileres) -->
+                    <svg class="w-16 h-16 text-maclegal-gold mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6-4h.01M15 12h.01M10 16h.01M13 16h.01M7 16h.01"></path></svg>
+                    <h3 class="text-2xl font-bold text-maclegal-blue mb-3">Alquileres</h3>
+                    <p class="text-gray-600 text-sm">
+                        Nos encargamos de la gestión de la licencia de alquiler turístico y su posterior gestión, así como de la gestión de la declaración y desgravación de los gastos y beneficios de esta vivienda.
+                    </p>
+                </div>
+                <!-- Tarjeta Servicio 3: Testamentos -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Icono SVG: Documento (Testamentos) -->
+                    <svg class="w-16 h-16 text-maclegal-gold mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3 class="text-2xl font-bold text-maclegal-blue mb-3">Testamentos</h3>
+                    <p class="text-gray-600 text-sm">
+                        Cuando una persona extranjera adquiere una vivienda en España, aconsejamos la realización de un testamento en España. Esto agilizaría la tramitación de la herencia, haciendo el proceso más práctico y con menor coste económico.
+                    </p>
+                </div>
+                <!-- Tarjeta Servicio 4: Herencias y Donaciones -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Icono SVG: Maletín (Herencias/Donaciones) -->
+                    <svg class="w-16 h-16 text-maclegal-gold mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 2a2 2 0 00-2 2v1a2 2 0 002 2h4a2 2 0 002-2V4a2 2 0 00-2-2h-4zM6 6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2H6z"></path></svg>
+                    <h3 class="text-2xl font-bold text-maclegal-blue mb-3">Herencias y Donaciones</h3>
+                    <p class="text-gray-600 text-sm">
+                        La herencia es el conjunto de bienes, derechos y obligaciones que una persona puede transmitir al fallecer. La donación es el acto de dar bienes materiales. Ofrecemos asesoramiento legal y de gestión integral en ambos casos, relacionados con una vivienda.
+                    </p>
+                </div>
+                <!-- Tarjeta Servicio 5: Extinción de Condominios -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Icono SVG: Grupo (Condominios) -->
+                    <svg class="w-16 h-16 text-maclegal-gold mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 016-6h6a6 6 0 016 6v1h-3M15 21a2 2 0 002-2v-1a6 6 0 00-6-6h-6a6 6 0 00-6 6v1a2 2 0 002 2h12z"></path></svg>
+                    <h3 class="text-2xl font-bold text-maclegal-blue mb-3">Extinción de Condominios</h3>
+                    <p class="text-gray-600 text-sm">
+                        Un condominio es un bien cuya propiedad recae en más de una persona. Nos encargamos de asesorar y buscar la manera más económica de poder resolver el condominio de las propiedades en común.
+                    </p>
+                </div>
+                <!-- Tarjeta Servicio 6: Área Judicial -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-transform duration-300">
+                    <!-- Icono SVG: Escudo (Judicial) -->
+                    <svg class="w-16 h-16 text-maclegal-gold mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12 12 0 0012 21.694a12 12 0 008.618-15.706z"></path></svg>
+                    <h3 class="text-2xl font-bold text-maclegal-blue mb-3">Área Judicial</h3>
+                    <p class="text-gray-600 text-sm">
+                        Contamos con un gran equipo de abogados especializados en cada materia para ser lo más profesional posible: desde defectos de construcción, procesos contra bancos por cobro excesivo de comisiones, hasta reclamación a compañías de seguros por accidentes de tráfico, etc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Sección "Por Qué Elegirnos" (ACTUALIZADA con idiomas y servicio móvil) ===== -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Columna de Imagen -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x450/0a2342/f3b63a?text=Equipo+Multiling%C3%BCe" 
+                         alt="Equipo multilingüe de MacLegal" 
+                         class="rounded-lg shadow-2xl w-full">
+                </div>
+                <!-- Columna de Texto -->
+                <div class="md:w-1/2">
+                    <span class="text-sm font-bold text-maclegal-gold uppercase tracking-wider">Tu Tranquilidad, Nuestra Misión</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-maclegal-blue mt-2 mb-6">¿Por qué elegir MacLegal?</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Entendemos los desafíos de invertir en un país extranjero. Nuestro servicio está diseñado para darte una tranquilidad total y una comunicación fluida.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-maclegal-gold font-bold text-2xl mr-3">✓</span>
+                            <div>
+                                <h4 class="font-bold text-maclegal-blue text-lg">Asesoría Multilingüe de Trato Preferente</h4>
+                                <p class="text-gray-600">Ofrecemos trato preferente en: **Inglés, Sueco, Francés, Alemán, Polaco y Holandés**.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-maclegal-gold font-bold text-2xl mr-3">✓</span>
+                            <div>
+                                <h4 class="font-bold text-maclegal-blue text-lg">Servicio Móvil de Atención Telefónica</h4>
+                                <p class="text-gray-600">Equipo de abogados altamente capacitados, disponible con un servicio de atención telefónica especializado y atento a sus necesidades.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-maclegal-gold font-bold text-2xl mr-3">✓</span>
+                            <div>
+                                <h4 class="font-bold text-maclegal-blue text-lg">Gestión Integral sin Desplazarse</h4>
+                                <p class="text-gray-600">Nos otorgas un poder y asistimos legalmente a todas las operaciones en tu nombre, en cualquier punto de España.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Sección "Cómo Funciona" (Proceso) ===== -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-maclegal-blue text-center mb-16">Inicia tu gestión en 3 sencillos pasos</h2>
+            
+            <div class="flex flex-col md:flex-row justify-between space-y-12 md:space-y-0 md:space-x-8">
+                <!-- Paso 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-maclegal-gold text-maclegal-blue w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold mb-4 shadow-lg">1</div>
+                    <h3 class="text-xl font-bold text-maclegal-blue mb-2">Consulta Gratuita</h3>
+                    <p class="text-gray-600 max-w-xs">Nos envías tu documentación. Uno de nuestros abogados la estudiará sin coste ni compromiso.</p>
+                </div>
+                
+                <!-- Conector -->
+                <div class="hidden md:block border-t-2 border-dashed border-maclegal-gold w-1/4 self-center mt-8"></div>
+
+                <!-- Paso 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-maclegal-gold text-maclegal-blue w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold mb-4 shadow-lg">2</div>
+                    <h3 class="text-xl font-bold text-maclegal-blue mb-2">Estudio de Viabilidad</h3>
+                    <p class="text-gray-600 max-w-xs">Te confirmamos la viabilidad de tu caso y el plan de acción legal más eficiente para conseguir tu objetivo.</p>
+                </div>
+                
+                <!-- Conector -->
+                <div class="hidden md:block border-t-2 border-dashed border-maclegal-gold w-1/4 self-center mt-8"></div>
+
+                <!-- Paso 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-maclegal-gold text-maclegal-blue w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold mb-4 shadow-lg">3</div>
+                    <h3 class="text-xl font-bold text-maclegal-blue mb-2">Ejecución y Gestión</h3>
+                    <p class="text-gray-600 max-w-xs">Nos encargamos de todo, desde la representación hasta la tramitación, para que <strong class="text-maclegal-blue">no necesites desplazarte.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Sección Testimonios (Prueba Social) ===== -->
+    <section id="nosotros" class="py-24 bg-maclegal-blue text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-4">
+                La tranquilidad de nuestros clientes es nuestra mejor garantía
+            </h2>
+            <p class="text-lg text-gray-300 text-center mb-16 max-w-2xl mx-auto">
+                Clientes de toda Europa confían en MacLegal para sus inversiones inmobiliarias y asuntos legales en España.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-2xl">
+                    <div class="flex text-maclegal-gold mb-4">
+                        <!-- 5 Estrellas -->
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-lg italic mb-6">"Compraron mi casa en Valencia por mí. No tuve que viajar. El proceso fue increíblemente fácil. Totalmente recomendados."</p>
+                    <p class="font-bold text-maclegal-blue">Karl S. - Suecia</p>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-2xl">
+                    <div class="flex text-maclegal-gold mb-4">
+                        <!-- 5 Estrellas -->
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-lg italic mb-6">"Gestionaron el testamento de mi padre y la herencia. Hablar en alemán con el abogado fue una tranquilidad."</p>
+                    <p class="font-bold text-white-800">Anne L. - Alemania</p>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-2xl">
+                    <div class="flex text-maclegal-gold mb-4">
+                        <!-- 5 Estrellas -->
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg classs="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-lg italic mb-6">"Me consiguieron la licencia de alquiler turístico y ahora gestionan mis impuestos. Un servicio 10 de 10."</p>
+                    <p class="font-bold text-maclegal-blue">David P. - Reino Unido</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Sección CTA Final y Formulario de Contacto ===== -->
+    <section id="contacto" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white p-10 md:p-16 rounded-lg shadow-2xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <!-- Columna de Texto -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-maclegal-blue mb-4">Inicia tu consulta <span class="text-maclegal-gold">hoy mismo</span></h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Rellena el formulario o llámanos. Nuestro equipo multilingüe analizará tu caso <strong class="text-maclegal-blue">100% gratis y sin compromiso</strong>.
+                        </p>
+                        <!-- Información de Contacto Directa -->
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <!-- Icono Teléfono -->
+                                <svg class="w-6 h-6 text-maclegal-gold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.3 1.15a11.042 11.042 0 005.17 5.17l1.15-2.3a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <a href="tel:911234567" class="text-lg text-gray-800 hover:text-maclegal-blue font-semibold">91 123 45 67</a>
+                            </div>
+                            <div class="flex items-center">
+                                <!-- Icono Email -->
+                                <svg class="w-6 h-6 text-maclegal-gold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <a href="mailto:info@maclegal.es" class="text-lg text-gray-800 hover:text-maclegal-blue font-semibold">info@maclegal.es</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna de Formulario -->
+                    <form id="contact-form" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-700 mb-1">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-maclegal-gold" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-maclegal-gold" placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-bold text-gray-700 mb-1">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-maclegal-gold" placeholder="Tu teléfono">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-bold text-gray-700 mb-1">Cuéntanos tu caso</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-maclegal-gold" placeholder="Quiero comprar una propiedad en..."></textarea>
+                        </div>
+                        <div class="flex items-start">
+                            <input id="privacy" name="privacy" type="checkbox" required class="h-4 w-4 text-maclegal-gold border-gray-300 rounded mt-1 focus:ring-maclegal-gold">
+                            <label for="privacy" class="ml-2 block text-sm text-gray-600">
+                                He leído y acepto la <a href="#" class="font-medium text-maclegal-blue hover:underline">Política de Privacidad</a>.
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full cta-button bg-maclegal-gold text-maclegal-blue px-8 py-4 rounded-lg font-extrabold text-lg shadow-lg hover:bg-yellow-500">
+                                ENVIAR CONSULTA GRATUITA
+                            </button>
+                        </div>
+                        <p id="form-status" class="text-center"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-maclegal-blue text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Columna 1: Logo e Info -->
+                <div>
+                    <a href="#" class="text-3xl font-extrabold text-white">
+                        Mac<span class="text-maclegal-gold">Legal</span>
+                    </a>
+                    <p class="text-gray-300 mt-4 text-sm">
+                        Despacho de abogados especialistas en derecho inmobiliario, extranjería y del consumidor para no residentes.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- Redes Sociales (iconos placeholder) -->
+                        <a href="#" class="text-gray-300 hover:text-maclegal-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="#" class="text-gray-300 hover:text-maclegal-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.119 0-5.63 2.512-5.63 5.63 0 .442.05.875.146 1.281-4.675-.235-8.82-2.473-11.59-5.874-.485.83-.762 1.799-.762 2.822 0 1.954.994 3.678 2.511 4.688-.92-.029-1.786-.284-2.543-.699v.07c0 2.728 1.94 4.998 4.508 5.513-.47.128-.967.197-1.482.197-.362 0-.712-.035-1.05-.098.716 2.239 2.79 3.868 5.253 3.914-1.928 1.508-4.354 2.408-6.98 2.408-.455 0-.898-.026-1.334-.078 2.493 1.598 5.46 2.53 8.65 2.53 10.377 0 16.057-8.614 16.057-16.057 0-.244-.005-.488-.015-.73A11.507 11.507 0 0024 4.557z"/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Columna 2: Servicios -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#servicios" class="text-gray-300 hover:text-maclegal-gold">Compra-Venta Inmuebles</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-maclegal-gold">Gestión de Alquileres</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-maclegal-gold">Testamentos</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-maclegal-gold">Herencias y Donaciones</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-maclegal-gold">Extinción de Condominios</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-maclegal-gold">Área Judicial</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Legal -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-maclegal-gold">Aviso Legal</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-maclegal-gold">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-maclegal-gold">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Contacto</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <span class="text-maclegal-gold mt-1 mr-2">●</span>
+                            <span class="text-gray-300">C/ Falsa, 123, 1ºA<br>28001 Madrid, España</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-maclegal-gold mr-2">●</span>
+                            <a href="tel:911234567" class="text-gray-300 hover:text-maclegal-gold">91 123 45 67</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-maclegal-gold mr-2">●</span>
+                            <a href="mailto:info@maclegal.es" class="text-gray-300 hover:text-maclegal-gold">info@maclegal.es</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 MacLegal Abogados. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Script para el menú móvil ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle del menú móvil
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Cierra el menú móvil al hacer clic en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+
+        // --- Script para el envío del formulario (simulado) ---
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simulación de envío
+            formStatus.textContent = 'Enviando...';
+            formStatus.className = 'text-center text-maclegal-blue';
+
+            setTimeout(() => {
+                formStatus.textContent = '¡Gracias por tu consulta! Te contactaremos en breve.';
+                formStatus.className = 'text-center text-green-600 font-bold';
+                contactForm.reset();
+            }, 1500);
+            
+            // En un caso real, aquí iría la lógica de fetch() para enviar a un backend
+        });
+    </script>
+
+</body>
+</html>
